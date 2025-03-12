@@ -17,6 +17,15 @@
 
 #define version V001
 
+int sum(int a, int b)
+{
+	int sum_value = 0;
+	
+	sum_value = a+b;
+
+	return sum_value;
+}
+
 static int test_common_suspend(struct device *dev)
 {
 	return 0;
@@ -31,7 +40,9 @@ int test_chip_common_probe(struct i2c_client *client,
 		const struct i2c_device_id *id)
 {
 	int ret = 0;
-
+	
+	ret = sum(10,20);
+	
 	return ret;
 }
 
