@@ -15,6 +15,8 @@
 
 #include "test_platform.h"
 
+#define version V001
+
 static int test_common_suspend(struct device *dev)
 {
 	return 0;
