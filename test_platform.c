@@ -77,6 +77,7 @@ static struct i2c_driver test_common_driver = {
 static int __init test_common_init(void)
 {
 	I("driver init\n");
+	I("Hello world\n");
 
 	i2c_add_driver(&test_common_driver);
 
