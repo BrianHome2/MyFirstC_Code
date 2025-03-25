@@ -1,3 +1,5 @@
+/*this is test/
+
 /* SPDX-License-Identifier: GPL-2.0 */
 /*  test Android Driver Sample Code for QCT platform
  *
@@ -93,3 +95,6 @@ module_exit(test_common_exit);
 
 MODULE_DESCRIPTION("test_common driver");
 MODULE_LICENSE("GPL");
+
+
+test
