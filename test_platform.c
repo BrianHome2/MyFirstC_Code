@@ -97,7 +97,6 @@ MODULE_LICENSE("GPL");
 
 test
 
-#include <stdio.h>
 
 // Q1 計算字串長度的函式
 int string_length(const char *str) {
@@ -109,28 +108,13 @@ int string_length(const char *str) {
     return length;        // 返回字串的長度
 }
 
-int main() {
-    const char *testString = "Hello, World!";
-    int length = string_length(testString);
-    printf("The length of the string \"%s\" is %d.\n", testString, length);
-    return 0;
-}
 
-#include <stdio.h>
+
 // Q2 寫一個 C 程式來交換兩個變數的值（不能使用額外變數）
-int main() {
-    int a = 5;
-    int b = 10;
-
-    printf("原始值: a = %d, b = %d\n", a, b);
-
-    // 使用異或運算子來交換
-    a = a ^ b;  // 第一步：a 現在是 a 和 b 的異或結果
-    b = a ^ b;  // 第二步：b 現在是原始的 a
-    a = a ^ b;  // 第三步：a 現在是原始的 b
-
-    printf("交換後: a = %d, b = %d\n", a, b);
-    return 0;
+void swap(int *a, int *b) {
+    *a = *a ^ *b;  // 第一步：a 現在是 a 和 b 的異或結果
+    *b = *a ^ *b;  // 第二步：b 現在是原始的 a
+    *a = *a ^ *b;  // 第三步：a 現在是原始的 b
 }
 
 
@@ -188,8 +172,7 @@ int main() {
 }
 
 
-#include <stdio.h>
-#include <stdint.h>
+
 //Q4 用c語言寫一個函式 reverse_bits()，可以反轉一個 uint8_t 變數的位元順序。
 uint8_t reverse_bits(uint8_t n) {
     uint8_t reversed = 0;
@@ -202,18 +185,7 @@ uint8_t reverse_bits(uint8_t n) {
     return reversed;
 }
 
-int main() {
-    uint8_t num = 0b11010010; // 例子：輸入一個數
-    uint8_t reversed_num = reverse_bits(num);
-    
-    printf("Original: %u\n", num);
-    printf("Reversed: %u\n", reversed_num);
-    
-    return 0;
-}
 
-
-#include <stdio.h>
 //Q5 建立 static  function 寫一個 C 程式來交換兩個變數的值（不能使用額外變數)
 static void swap(int *a, int *b) {
     *a = *a + *b; // 第一步：將兩個變數相加
@@ -221,17 +193,7 @@ static void swap(int *a, int *b) {
     *a = *a - *b; // 第三步：計算新 a 的值
 }
 
-int main() {
-    int x = 5;
-    int y = 10;
 
-    printf("Before swap: x = %d, y = %d\n", x, y);
-    
-    swap(&x, &y); // 呼叫 swap 函式，傳遞 x 和 y 的地址
-
-    printf("After swap: x = %d, y = %d\n", x, y);
-    return 0;
-}
 
 
 
